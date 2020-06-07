@@ -11,7 +11,9 @@ import {cardsInBasketSelector, selectedItemsSelector, ChangeBasketContent} from 
 })
 export class GcBasketSectionComponent {
 
-  cardsInBasket$: Observable<any> = this.store.select(cardsInBasketSelector).pipe();
+  cardsInBasket$: Observable<any> = this.store.select(cardsInBasketSelector).pipe(
+    tap(cardsInBasket => this.hasElements = !!cardsInBasket && !!cardsInBasket.length)
+  );
 
   private isAlive: boolean = true;
   private clickAction: boolean = false;
