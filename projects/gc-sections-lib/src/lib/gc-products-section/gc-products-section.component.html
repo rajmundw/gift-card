@@ -1,0 +1,12 @@
+<div class="row1">
+    <div class="title">Products</div>
+</div>
+
+<div class="row2">
+    <div class="available-items" *ngFor="let item of availableItems$ | async">
+        <div class="col1"><img [src]="item.cover"></div>
+        <div class="col2">{{item.title}}</div>
+        <div class="col3">{{item.price}}</div>
+        <button class="col4" [disabled]="!item.availability" (click)="addCardToBasket(item.id)">add to cart</button>
+    </div>    
+</div>

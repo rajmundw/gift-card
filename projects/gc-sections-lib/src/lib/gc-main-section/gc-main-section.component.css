@@ -1,0 +1,24 @@
+body {
+    margin: 0;
+    box-sizing: border-box;
+}
+lib-gc-main-section {
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+    overflow: hidden;
+}
+
+
+
+.products {
+    display: flex;
+    width: 50%;
+    height: 100%;
+    overflow-y: auto;
+}
+
+.cart {
+    display: flex;
+    width: 50%;
+}

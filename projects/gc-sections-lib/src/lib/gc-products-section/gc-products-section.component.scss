@@ -1,0 +1,45 @@
+gc-products-section {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    align-items: center;
+    
+    > .row1 {
+        display: flex;
+        height: 15%;
+        width: 100%;
+        justify-content: center;
+        align-items: flex-end;
+        > .title {
+            font-size:  35px;
+        }
+    }
+    > .row2 {
+        height: 85%;
+        display: flex;
+        width: 100%;
+        flex-direction: row;
+        flex-wrap: wrap;
+        > .available-items {
+            box-sizing: border-box;
+            padding: 10px;
+            width: 33%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            > .col1 {
+                img {
+                    width: 100%;
+                }
+            }
+            > .col2 {
+                text-align: center;
+            }
+        }
+        
+    }
+}

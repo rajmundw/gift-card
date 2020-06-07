@@ -1,0 +1,68 @@
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "baseUrl": "./",
+    "outDir": "./dist/out-tsc",
+    "sourceMap": true,
+    "declaration": false,
+    "downlevelIteration": true,
+    "experimentalDecorators": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "importHelpers": true,
+    "target": "es2015",
+    "typeRoots": [
+      "node_modules/@types"
+    ],
+    "lib": [
+      "es2018",
+      "dom"
+    ],
+    "paths": {
+      "gc-sections-lib": [
+        "dist/gc-sections-lib",
+        "../../dist/gc-sections-lib",
+        "../../../dist/gc-sections-lib"
+      ],
+      "gc-sections-lib/*": [
+        "dist/gc-sections-lib/*",
+        "../../dist/gc-sections-lib/*",
+        "../../../dist/gc-sections-lib/*"
+      ],
+      "gc-api-lib": [
+        "dist/gc-api-lib",
+        "../../dist/gc-api-lib",
+        "../../../dist/gc-api-lib"
+      ],
+      "gc-api-lib/*": [
+        "dist/gc-api-lib/*",
+        "../../dist/gc-api-lib/*",
+        "../../../dist/gc-api-lib/*"
+      ],
+      "gc-store-lib": [
+        "dist/gc-store-lib",
+        "../../dist/gc-store-lib",
+        "../../../dist/gc-store-lib"
+      ],
+      "gc-store-lib/*": [
+        "dist/gc-store-lib/*",
+        "../../dist/gc-store-lib/*",
+        "../../../dist/gc-store-lib/*"
+      ],
+      "gc-types-lib": [
+        "dist/gc-types-lib",
+        "../../dist/gc-types-lib",
+        "../../../dist/gc-types-lib"
+      ],
+      "gc-types-lib/*": [
+        "dist/gc-types-lib/*",
+        "../../dist/gc-types-lib/*",
+        "../../../dist/gc-types-lib/*"
+      ]
+    }
+  },
+  "angularCompilerOptions": {
+    "fullTemplateTypeCheck": true,
+    "strictInjectionParameters": true
+  }
+}

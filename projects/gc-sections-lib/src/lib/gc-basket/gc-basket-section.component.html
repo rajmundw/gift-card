@@ -1,0 +1,18 @@
+<div class="row1">
+    <div class="title">Cart</div>
+</div>
+<div class="row2" [ngClass]="!hasElements ? 'center-text' : ''">
+    <div class="empty-cart"*ngIf="!hasElements">Cart is empty</div>
+
+    <div class="cart-element" *ngFor="let item of cardsInBasket$ | async">
+        <div class="col1"><img [src]="item.cover"></div>
+        <div class="col2">{{item.title}}</div>
+        <div class="col3">{{item.price}}</div>
+        <div class="col4">{{item.quantity}}</div>
+        <div class="col5">{{(item.quantity * item.price).toFixed(2)}}</div>
+        <button class="col6" (click)="removeCardFromBasket(item.id)">remove</button>
+    </div>
+</div>
+<div class="row3" [ngClass]="hasElements ? 'add-border-to-price-section' : ''">
+    <div *ngIf="hasElements"class="total-price">Total {{cardsInBasket$ | async | totalPrice}}</div>
+</div>
